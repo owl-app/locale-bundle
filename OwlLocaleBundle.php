@@ -27,6 +27,11 @@ final class OwlLocaleBundle extends AbstractResourceBundle
         $container->addCompilerPass(new CompositeLocaleContextPass());
     }
 
+    /**
+     * @return string[]
+     *
+     * @psalm-return list{'doctrine/orm', 'doctrine/mongodb-odm'}
+     */
     public function getSupportedDrivers(): array
     {
         return [
@@ -37,6 +42,10 @@ final class OwlLocaleBundle extends AbstractResourceBundle
 
     /**
      * @psalm-suppress MismatchingDocblockReturnType https://github.com/vimeo/psalm/issues/2345
+     *
+     * @return string
+     *
+     * @psalm-return 'Owl\Component\Locale\Model'
      */
     protected function getModelNamespace(): string
     {

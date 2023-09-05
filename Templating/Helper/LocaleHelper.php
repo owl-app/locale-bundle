@@ -36,6 +36,9 @@ final class LocaleHelper extends Helper implements LocaleHelperInterface
         $this->localeContext = $localeContext;
     }
 
+    /**
+     * @return string
+     */
     public function convertCodeToName(string $code, ?string $localeCode = null): ?string
     {
         try {
@@ -45,6 +48,11 @@ final class LocaleHelper extends Helper implements LocaleHelperInterface
         }
     }
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'sylius_locale'
+     */
     public function getName(): string
     {
         return 'sylius_locale';

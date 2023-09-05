@@ -53,11 +53,21 @@ final class LocaleChoiceType extends AbstractType
         ]);
     }
 
+    /**
+     * @return string
+     *
+     * @psalm-return ChoiceType::class
+     */
     public function getParent(): string
     {
         return ChoiceType::class;
     }
 
+    /**
+     * @return string
+     *
+     * @psalm-return 'sylius_locale_choice'
+     */
     public function getBlockPrefix(): string
     {
         return 'sylius_locale_choice';

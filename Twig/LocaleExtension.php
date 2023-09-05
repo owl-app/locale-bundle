@@ -27,6 +27,11 @@ final class LocaleExtension extends AbstractExtension
         $this->localeHelper = $localeHelper;
     }
 
+    /**
+     * @return TwigFilter[]
+     *
+     * @psalm-return list{TwigFilter, TwigFilter}
+     */
     public function getFilters(): array
     {
         return [
@@ -35,7 +40,7 @@ final class LocaleExtension extends AbstractExtension
         ];
     }
 
-    public function getCountryCode(string $locale): ?string
+    public function getCountryCode(string $locale): string
     {
         return \Locale::getRegion($locale);
     }

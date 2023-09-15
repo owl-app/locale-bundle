@@ -28,8 +28,6 @@ final class LocaleType extends AbstractResourceType
     }
 
     /**
-     * @return string
-     *
      * @psalm-return 'sylius_locale'
      */
     public function getBlockPrefix(): string

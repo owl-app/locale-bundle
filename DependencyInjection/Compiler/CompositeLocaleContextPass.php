@@ -23,7 +23,7 @@ final class CompositeLocaleContextPass extends PrioritizedCompositeServicePass
             'owl.context.locale',
             'owl.context.locale.composite',
             'owl.context.locale',
-            'addContext'
+            'addContext',
         );
     }
 }

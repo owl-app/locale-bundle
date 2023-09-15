@@ -43,8 +43,6 @@ final class OwlLocaleBundle extends AbstractResourceBundle
     /**
      * @psalm-suppress MismatchingDocblockReturnType https://github.com/vimeo/psalm/issues/2345
      *
-     * @return string
-     *
      * @psalm-return 'Owl\Component\Locale\Model'
      */
     protected function getModelNamespace(): string

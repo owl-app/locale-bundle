@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace spec\Owl\Bundle\LocaleBundle\Templating\Helper;
 
-use PhpSpec\ObjectBehavior;
 use Owl\Bundle\LocaleBundle\Templating\Helper\LocaleHelperInterface;
 use Owl\Component\Locale\Context\LocaleContextInterface;
 use Owl\Component\Locale\Context\LocaleNotFoundException;
 use Owl\Component\Locale\Converter\LocaleConverterInterface;
+use PhpSpec\ObjectBehavior;
 use Symfony\Component\Templating\Helper\Helper;
 
 final class LocaleHelperSpec extends ObjectBehavior
@@ -53,7 +53,7 @@ final class LocaleHelperSpec extends ObjectBehavior
 
     public function it_converts_locales_code_to_name_using_locale_from_the_context(
         LocaleConverterInterface $localeConverter,
-        LocaleContextInterface $localeContext
+        LocaleContextInterface $localeContext,
     ): void {
         $this->beConstructedWith($localeConverter, $localeContext);
 
@@ -66,7 +66,7 @@ final class LocaleHelperSpec extends ObjectBehavior
 
     public function it_converts_locale_code_to_name_using_default_locale_if_passed_locale_context_throws_an_exception(
         LocaleConverterInterface $localeConverter,
-        LocaleContextInterface $localeContext
+        LocaleContextInterface $localeContext,
     ): void {
         $this->beConstructedWith($localeConverter, $localeContext);
 

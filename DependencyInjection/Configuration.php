@@ -15,9 +15,8 @@ namespace Owl\Bundle\LocaleBundle\DependencyInjection;
 
 use Owl\Bridge\SyliusResource\Controller\BaseController;
 use Owl\Bundle\LocaleBundle\Form\Type\LocaleType;
-use Sylius\Bundle\ResourceBundle\SyliusResourceBundle;
 use Owl\Component\Locale\Model\Locale;
-use Owl\Component\Locale\Model\LocaleInterface;
+use Sylius\Bundle\ResourceBundle\SyliusResourceBundle;
 use Sylius\Component\Resource\Factory\Factory;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;

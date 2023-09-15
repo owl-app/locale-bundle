@@ -49,8 +49,6 @@ final class LocaleHelper extends Helper implements LocaleHelperInterface
     }
 
     /**
-     * @return string
-     *
      * @psalm-return 'sylius_locale'
      */
     public function getName(): string

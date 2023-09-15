@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace spec\Owl\Bundle\LocaleBundle\Listener;
 
-use PhpSpec\ObjectBehavior;
 use Owl\Component\Locale\Context\LocaleContextInterface;
 use Owl\Component\Locale\Provider\LocaleProviderInterface;
+use PhpSpec\ObjectBehavior;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
 
@@ -30,7 +30,7 @@ final class RequestLocaleSetterSpec extends ObjectBehavior
         LocaleContextInterface $localeContext,
         LocaleProviderInterface $localeProvider,
         RequestEvent $event,
-        Request $request
+        Request $request,
     ): void {
         $event->getRequest()->willReturn($request);
 
